@@ -9,5 +9,8 @@ block content
     each text in infos.toDo
       li= text
 
-  a(href="/logout").btn.btn-default Log out
-  a(href="/addTask").btn.btn-default Add
+  div.cont
+    form(action='/addTask', method='POST')
+      input(value="task", name="task", class="inputText")
+      input(type="submit", value="Ajouter", class="inputSubmit")
+    a(href="/logout").btn.btn-default Log out

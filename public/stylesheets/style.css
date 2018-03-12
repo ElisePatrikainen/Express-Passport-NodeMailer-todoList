@@ -3,10 +3,30 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
+a, .inputSubmit {
   padding: 10px 20px; 
   margin: 10px; 
   border: 2px solid grey; 
   text-decoration: none; 
   color: grey; 
+}
+
+.logIn {
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.inputText {
+  border: none; 
+  border-bottom: 2px solid grey; 
+  padding-bottom: 10px; 
+  color: grey; 
+}
+
+input:focus {
+  border: none
+}
+
+.cont {
+  display: flex; 
 }

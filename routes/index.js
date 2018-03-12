@@ -27,14 +27,12 @@ router.get('/auth/google/callback',
     res.redirect('/');
   });
 
-  router.get('/addTask', function(req, res) {
-    console.log('req.user', req.user)
-    if (!req.user.toDo) { req.user.toDo = []}
+  router.post('/addTask', function(req, res) {
     var searchQuery = {
       email: req.user.email
     };
     var updates = {
-      toDo : req.user.toDo.push('Nouvelle tâche')
+      $addToSet: {toDo : req.body.task}
     }
     var options = {
       new: true, 
@@ -45,7 +43,7 @@ router.get('/auth/google/callback',
         return console.log(err);
       } else {
           console.log('Updated', user)
-          res.render('loggedIn', { infos : req.user})
+          res.render('loggedIn', { infos : user})
       }
     });
 
