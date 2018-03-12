@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 Bienvenue #{infos.name}
+  img(src=infos.photo)
+
+  p Liste des tâches
+  ul
+    each text in infos.toDo
+      li= text
+
+  a(href="/logout").btn.btn-default Log out
+  a(href="/addTask").btn.btn-default Add
