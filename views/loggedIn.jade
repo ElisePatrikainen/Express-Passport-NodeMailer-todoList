@@ -10,7 +10,7 @@ block content
       li= text
 
   div.cont
-    form(action='/addTask', method='POST')
-      input(value="task", name="task", class="inputText")
-      input(type="submit", value="Ajouter", class="inputSubmit")
+    form(action='/addTask', method='POST').row
+      input(name="task", id="taskInput").col.s6.inline
+      input(type="submit", value="Ajouter", class="inputSubmit").btn.btn-default
     a(href="/logout").btn.btn-default Log out

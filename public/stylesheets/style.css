@@ -24,9 +24,5 @@ a, .inputSubmit {
 }
 
 input:focus {
-  border: none
 }
 
-.cont {
-  display: flex; 
-}
